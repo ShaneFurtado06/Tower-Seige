@@ -18,7 +18,7 @@ function setup(){
     Engine.run(engine);
 
     //ground
-    mainGround=new Ground(window.innerWidth*0,window.innerHeight*0+675,20000);
+    mainGround=new Ground(window.innerWidth*0,window.innerHeight-45,20000);
 
     //stands
     s1=new Stand(window.innerWidth*0+650,window.innerHeight*0+400);
@@ -191,10 +191,7 @@ function draw(){
     c16.display();
     c17.display();
     //stack5
-    c18.display();
-
-    //increase score
-    
+    c18.display(); 
 
     drawSprites();
 }
