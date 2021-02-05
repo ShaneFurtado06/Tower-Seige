@@ -200,7 +200,7 @@ function draw(){
 }
 
 function mouseDragged(){
-    if(gameState==="Sling"){
+    if(gameState!="Launched"){
         Matter.Body.setPosition(this.ball, {x: mouseX , y: mouseY});
     }    
 }
@@ -213,7 +213,7 @@ function mouseReleased(){
 
 function keyPressed(){
     if(keyCode===32&&chance<4){
-        gameState="Sling"
+       gameState="Sling"
         Matter.Body.setPosition(this.ball,{x:window.innerWidth*0+270,y:window.innerHeight*0+200});
         sling.reAttach(this.ball);
         chance++;
