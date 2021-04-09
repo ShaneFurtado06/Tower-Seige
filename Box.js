@@ -12,12 +12,14 @@ class Box{
     }
 
     display(){
-        var pos=this.body.position;
-        var angle=this.body.angle;
-
         if(this.body.speed>6){
             score++
         }
+        
+        if(this.body.speed<3){
+        
+        var pos=this.body.position;
+        var angle=this.body.angle;
            
         push ();
             translate (pos.x,pos.y);
@@ -28,5 +30,14 @@ class Box{
             fill ("pink");
             rect(0,0,40,40);
         pop ();    
+            
+        }   
+        
+        else{
+            World.remove(world,this.body);
+            push();
+            this.Visiblity=this.Visiblity-5;
+            pop();
+        }
     }
 }
